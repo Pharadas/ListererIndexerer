@@ -8,7 +8,6 @@ this = True
 while this:
     print('###########################################################################')
     thisList = [rndm.randint(0, maxValueOfList) for i in range(sizeOfList)]
-    # thisList = [14, 16, 28, 7, 12, 26, 20, 0, 5, 0]
 
     print(thisList)
 

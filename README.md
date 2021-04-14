@@ -10,6 +10,7 @@ Example:
     n the length of the list
     p the max value
     going from i = first item of the list to the n'th
+    
     ⅀(p + n - i - 1)^(n - i - 1)
     
   In this case, it would output the value 1331470

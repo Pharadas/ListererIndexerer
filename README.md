@@ -36,3 +36,5 @@ Example:
     v is less than p, therefore v is out last value and our list is complete, [20, 40, 250]
 
   And as we can see, our initial list is equal to the list we recuperated.
+  
+![alt text](https://github.com/Pharadas/encryption_methods/blob/main/image.png?raw=true)

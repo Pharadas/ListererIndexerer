@@ -26,13 +26,13 @@ Example:
     r is our first value of the list [20]
     v = v - ((p + n - i - 1)^(n - i - 1) * r), v = 10490
   
-  Repeat this process until v is lesser than or equal to the max value, in that case, v is the last value of the list.
+  Repeat this process until v is less than or equal to the max value, in that case, v is the last value of the list.
 
     r = v / ((p + n - i - 1)^(n - i - 1)) = 10490 / ((255 + 3 - 1 - 1)^(3 - 1 - 1)) = 40.9765
     truncate r down, r = 40
     r is our second value of the list [20, 40]
     v = v - ((p + n - i - 1)^(n - i - 1) * r), v = 250
 
-    v is lesser than p, therefore v is out last value and our list is complete, [20, 40, 250]
+    v is less than p, therefore v is out last value and our list is complete, [20, 40, 250]
 
   And as we can see, our initial list is equal to the list we recuperated.

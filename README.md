@@ -1,7 +1,7 @@
 # Encryption methods
 
 - Listerer indexerer
-The listerer indexerer encryption method takes a list of numbers which have a maximum value and converts it into the index it would have in an imaginary list of all possible combinations of that list, and that way it can be used to generate the list again.
+The listerer indexerer encryption method designed and implemented by me, which takes a list of numbers that have a maximum value and converts it into the index it would have in an imaginary list of all possible combinations of that list, and that way it can be used to generate the list again.
 
 Example:
   Given the list [20, 40, 250], with a max value of 255, it will give the 'imaginary index' it would have, this is very simply given by the formula:

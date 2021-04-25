@@ -1,4 +1,4 @@
-# Encryption methods
+# Listerer Indexerer
 
 The "listerer indexerer" is an encryption method designed and implemented by me, which works by converting a list of bytes from a file into an integer, that can be seen as an "index" to the position where this list would be found in an array of all possible permutations of the numbers from said list.
 

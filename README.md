@@ -1,39 +1,37 @@
 # Encryption methods
 
-- Listerer indexerer
-The listerer indexerer encryption method designed and implemented by me, which takes a list of numbers that have a maximum value and converts it into the index it would have in an imaginary list of all possible combinations of that list, and that way it can be used to generate the list again.
+The "listerer indexerer" is an encryption method designed and implemented by me, which works by converting a list of bytes from a file into an integer, that can be seen as an "index" to the position where this list would be found in an array of all possible permutations of the numbers from said list.
 
 Example:
-  Given the list [20, 40, 250], with a max value of 255, it will give the 'imaginary index' it would have, this is very simply given by the formula:
+  Given the list [20, 40, 250], with a max value of 255, the function 'findListIndex' will return the 'imaginary index' it would have, this is given by the formula:
     
-    being i a given item's position of the list
-    n the length of the list
-    p the max value
-    going from i = first item of the list to the n'th
+    N = Length of the list
+    P = Maximum value that could be in the list
+    I = Iterator starting at the size of the list and decreasing by one until it reaches 0
     
-    ⅀(p + n - i - 1)^(n - i - 1)
+    ⅀(P + N - I - 1)^(N - I - 1)
     
-  In this case, it would output the value 1331470
-  To then get the list back, it would follow this process:
+  In this case, the list's index would be 1331470
+  To then get the list back, the function 'indexererListerer' would follow this process:
   
-    v = given value of 'index' of a list
-    p = max possible value of the list
-    n = length of the list
-    i = iterator
+    V = Value of 'index' of a list
+    N = Maximum value that could be in the list
+    N = Length of the list
+    I = Iterator starting at the size of the list and decreasing by one until it reaches 0
     
-    r = v / ((p + n - i - 1)^(n - i - 1)) = 1331470 / ((255 + 3 - 0 - 1)^(3 - 0 - 1)) = 20.158821
-    truncate r down, r = 20
-    r is our first value of the list [20]
-    v = v - ((p + n - i - 1)^(n - i - 1) * r), v = 10490
+    R = V / ((P + N - I - 1)^(N - I - 1))       || 1331470 / ((255 + 3 - 0 - 1)^(3 - 0 - 1)) = 20.158821
+    Truncate R downwards                        || R = 20
+    R is the first value of the list            || [20]
+    V = V - ((P + N - I - 1)^(N - I - 1) * R)   || V = 10490
   
-  Repeat this process until v is less than or equal to the max value, in that case, v is the last value of the list.
+  Repeat this process until V is less than or equal to P, in which case V is the last value of the list.
 
-    r = v / ((p + n - i - 1)^(n - i - 1)) = 10490 / ((255 + 3 - 1 - 1)^(3 - 1 - 1)) = 40.9765
-    truncate r down, r = 40
-    r is our second value of the list [20, 40]
-    v = v - ((p + n - i - 1)^(n - i - 1) * r), v = 250
+    R = V / ((P + N - I - 1)^(N - I - 1))     || 10490 / ((255 + 3 - 1 - 1)^(3 - 1 - 1)) = 40.9765
+    Truncate R downwards                      || R = 40
+    R is the second value of our list         || [20, 40]
+    V = V - ((P + N - I - 1)^(N - I - 1) * R) || V = 250
 
-    v is less than p, therefore v is out last value and our list is complete, [20, 40, 250]
+    V is now less than P, therefore V is out last value and our list is complete [20, 40, 250]
 
   And as we can see, our initial list is equal to the list we recuperated.
   

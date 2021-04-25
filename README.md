@@ -7,7 +7,7 @@ Example:
     
     N = Length of the list
     P = Maximum value that could be in the list
-    I = Iterator starting at the size of the list and decreasing by one until it reaches 0
+    I = Iterator starting at 0 and increasing until it reaches the size of the list
     
     ⅀(P + N - I - 1)^(N - I - 1)
     
@@ -17,7 +17,7 @@ Example:
     V = Value of 'index' of a list
     N = Maximum value that could be in the list
     N = Length of the list
-    I = Iterator starting at the size of the list and decreasing by one until it reaches 0
+    I = Iterator starting at 0 and increasing until it reaches the size of the list
     
     R = V / ((P + N - I - 1)^(N - I - 1))       || 1331470 / ((255 + 3 - 0 - 1)^(3 - 0 - 1)) = 20.158821
     Truncate R downwards                        || R = 20

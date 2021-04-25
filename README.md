@@ -35,4 +35,9 @@ Example:
 
   And as we can see, our initial list is equal to the list we recuperated.
   
+  
+EXAMPLES:
+
+![alt text](https://github.com/Pharadas/encryption_methods/blob/main/ListererIndexerRandomListExample.PNG?raw=true)
+
 ![alt text](https://github.com/Pharadas/encryption_methods/blob/main/image.png?raw=true)
